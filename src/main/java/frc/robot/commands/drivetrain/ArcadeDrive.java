@@ -46,7 +46,7 @@ public ArcadeDrive(){
     steer_cmd = Math.pow(x, 1) / 2; // cubing x and /2 makes it more "sensitive", maybe need to adjust deadbands
   
     // throttle is constant that controls "speed" of robot; helpful in testing in small areas
-    RobotContainer.driveTrain.arcadeDrive(drive_cmd*THROTTLE, steer_cmd*THROTTLE);   
+    RobotContainer.driveTrain.arcadeDrive(drive_cmd*THROTTLE, steer_cmd*0.5);   // Jacob Changed to make top speed 0.5
   }
 
   // Called once the command ends or is interrupted.
